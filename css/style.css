@@ -339,6 +339,7 @@ body::before {
 .fact-value {
     color: var(--text-color);
     font-weight: 600;
+    text-decoration: none;
 }
 
 .book-sections {
