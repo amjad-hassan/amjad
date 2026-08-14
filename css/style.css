@@ -115,11 +115,6 @@ body::before {
     flex-direction: column;
 }
 
-.header-flex {
-    flex: 1;
-    margin-bottom: 4rem;
-}
-
 .social-links {
     display: flex;
     justify-content: center;
@@ -142,6 +137,27 @@ body::before {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+}
+
+.identity {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.identity h1 {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+    background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.identity .role {
+    font-family: var(--body-font);
+    color: var(--secondary-color);
+    font-size: 1.1rem;
 }
 
 @keyframes spinBorder {
@@ -208,7 +224,7 @@ body::before {
     text-decoration: underline;
 }
 
-.intro-card {
+.card {
     flex: 1;
     margin-top: 0;
     min-width: 0;
@@ -223,7 +239,7 @@ body::before {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-.intro-card::before {
+.card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -234,12 +250,12 @@ body::before {
     z-index: 0;
 }
 
-.intro-card:hover {
+.card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
-.intro-card h1 {
+.card h1 {
     font-family: var(--heading-font);
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
@@ -249,6 +265,100 @@ body::before {
     -webkit-text-fill-color: transparent;
     position: relative;
     z-index: 1;
+}
+
+.card h2 {
+    font-family: var(--heading-font);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.content-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 1;
+}
+
+.skill-tag {
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 20px;
+    color: var(--text-color);
+    background: rgba(var(--accent-color-rgb), 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 8px var(--accent-color);
+}
+
+.info-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: var(--secondary-color);
+    position: relative;
+    z-index: 1;
+}
+
+.info-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.info-list i {
+    color: var(--accent-color);
+    width: 1.2rem;
+    text-align: center;
+}
+
+.fact-label {
+    color: var(--secondary-color);
+}
+
+.fact-value {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.book-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.book-group {
+    flex: 1;
+    min-width: 220px;
+}
+
+.book-group h3 {
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin-bottom: 0.75rem;
 }
 
 .bio {
@@ -267,7 +377,7 @@ body::before {
 .footer {
     text-align: center;
     padding: 1.5rem 0;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: var(--body-font);
     opacity: 0.8;
 }
 
@@ -285,26 +395,23 @@ body::before {
         padding: 2rem 1rem;
     }
 
-    .header-flex {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 1rem;
-    }
-
-    .intro-card {
+    .card {
         margin-top: 1rem;
     }
 
-    .intro-card h1 {
+    .card h1 {
         font-size: 2rem;
     }
 
-    .intro-card h2 {
-        font-size: 1rem;
+    .identity h1 {
+        font-size: 2rem;
     }
 
-    .intro-card .social-links {
+    .card h2 {
+        font-size: 1.25rem;
+    }
+
+    .card .social-links {
         justify-content: center;
     }
 }
