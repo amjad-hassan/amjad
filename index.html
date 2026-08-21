@@ -69,34 +69,19 @@
       <div class="particle"></div>
     </div>
     <div class="container">
-      <div class="profile-image">
-        <div class="circuit-avatar">
-          <img src="img/profile.jpg" alt="amjad" class="avatar" />
-        </div>
-      </div>
+      <div class="layout">
+        <aside class="sidebar">
+          <div class="profile-image">
+            <div class="circuit-avatar">
+              <img src="img/profile.jpg" alt="amjad" class="avatar" />
+            </div>
+          </div>
 
-      <div class="identity">
-        <h1>Amjad Hassan</h1>
-        <p class="role">Senior Software Engineer</p>
-      </div>
+          <div class="identity">
+            <h1>Amjad Hassan</h1>
+            <p class="role">Senior Software Engineer</p>
+          </div>
 
-      <div class="content-sections">
-        <section class="card">
-          <h2>about:</h2>
-          <p class="bio">
-            hi there, i've spent the last 10 years building backend systems,
-            mostly PHP/Laravel, with some GoLang and Node.js along the way. i
-            enjoy learning new things and sharing what i pick up with others.
-          </p>
-          <p class="bio">
-            outside of work, i like tinkering on open-source side projects, like
-            LaraScope, a Laravel monitoring package i built and maintain, and
-            diving into whatever new tech catches my eye.
-          </p>
-          <p class="bio">
-            if you have any questions, want to collaborate on a project, or just
-            wanna chat, you can reach out to me on:
-          </p>
           <div class="social-links">
             <a
               href="mailto:hi@amjad.codes"
@@ -124,9 +109,39 @@
                     <a href="https://bsky.app/profile/amjad.codes" target="_blank" rel="noopener noreferrer" class="hover-effect" aria-label="Bluesky"><i class="fab fa-bluesky" aria-hidden="true"></i></a>
                     <a href="https://blog.amjad.codes" target="_blank" rel="noopener noreferrer" class="hover-effect" aria-label="Blog"><i class="fas fa-pen-to-square" aria-hidden="true"></i></a> -->
           </div>
+        </aside>
+
+        <main class="content-sections">
+        <section class="card">
+          <div class="card-titlebar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="card-filename">about.md</span>
+          </div>
+          <div class="card-content">
+          <h2>$ cat about.md</h2>
+          <p class="bio">
+            hi there, i've spent the last 10 years building backend systems,
+            mostly PHP/Laravel, with some GoLang and Node.js along the way. i
+            enjoy learning new things and sharing what i pick up with others.
+          </p>
+          <p class="bio">
+            outside of work, i like tinkering on open-source side projects, like
+            LaraScope, a Laravel monitoring package i built and maintain, and
+            diving into whatever new tech catches my eye.
+          </p>
+          <p class="bio">
+            if you have any questions, want to collaborate on a project, or just
+            wanna chat, you can reach out to me on my socials.
+          </p>
+          </div>
         </section>
         <section class="card">
-          <h2>skills:</h2>
+          <div class="card-titlebar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="card-filename">skills.json</span>
+          </div>
+          <div class="card-content">
+          <h2>$ cat skills.json</h2>
           <div class="skill-tags">
             <span class="skill-tag">PHP</span>
             <span class="skill-tag">Laravel</span>
@@ -140,10 +155,16 @@
             <span class="skill-tag">TypeScript</span>
             <span class="skill-tag">Docker</span>
           </div>
+          </div>
         </section>
 
         <section class="card">
-          <h2>favorite books:</h2>
+          <div class="card-titlebar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="card-filename">books.txt</span>
+          </div>
+          <div class="card-content">
+          <h2>$ cat books.txt</h2>
           <div class="book-sections">
             <div class="book-group">
               <h3>tech books</h3>
@@ -180,10 +201,16 @@
               </ul>
             </div>
           </div>
+          </div>
         </section>
 
         <section class="card">
-          <h2>facts:</h2>
+          <div class="card-titlebar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="card-filename">facts.log</span>
+          </div>
+          <div class="card-content">
+          <h2>$ tail facts.log</h2>
           <ul class="info-list">
             <li>
               <i class="fas fa-gamepad" aria-hidden="true"></i>
@@ -212,7 +239,9 @@
               >
             </li>
           </ul>
+          </div>
         </section>
+        </main>
       </div>
 
       <footer class="footer">
@@ -223,5 +252,6 @@
       </footer>
     </div>
     <script src="js/theme.js"></script>
+    <script src="js/typewriter.js"></script>
   </body>
 </html>
