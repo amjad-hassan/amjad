@@ -1,7 +1,7 @@
 // theme switcher
 const themeToggle = document.querySelector(".theme-toggle");
 const htmlElement = document.documentElement;
-const themeIcon = themeToggle.querySelector("i");
+const themeIcon = themeToggle.querySelector(".theme-icon");
 
 // check for system preference
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -35,5 +35,5 @@ prefersDarkScheme.addEventListener("change", (e) => {
 });
 
 function updateThemeIcon(theme) {
-  themeIcon.className = theme === "light" ? "fas fa-moon" : "fas fa-sun";
+  themeIcon.textContent = theme === "light" ? "☽" : "☀";
 }
